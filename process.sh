@@ -1,3 +1,4 @@
+
 #!/bin/bash
 # Process card numbers
 while read -r i ; do
@@ -14,7 +15,7 @@ while read -r i ; do
 			echo $i >> /root/prototype/allowed  # Make tag invalid using master tag
 	elif grep --quiet $i /root/prototype/masters ; then
 		echo 'Master key'
-		master=ture
+		master=true
 	else
 		if [ master = true ] ; then
 			echo "New tag No. $i added to valid tags"
